@@ -1,0 +1,30 @@
+.st_icons {
+	border: 1px solid white;
+	display: inline-block;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	height: 42px;
+	width: 42px;
+	text-align: center;
+}
+
+.st_facebook_custom {
+	@extend .st_icons;
+}
+
+.st_twitter_custom {
+	@extend .st_icons;
+	@extend .fa;
+	@extend .fa-twitter;
+}
+
+.st_email_custom {
+	@extend .st_icons;
+	@extend .fa;
+	@extend .fa-envelope-o;
+}
+
+.fb-share-button {
+	display: inline;
+}

@@ -1,0 +1,118 @@
+body {
+	
+}
+
+.saltie-white {
+	color: $color-primary-font;
+}
+
+.saltie-small {
+	font-size: 10px;
+}
+
+.saltie-smedium {
+  font-size: 15px;
+}
+
+.saltie-medium {
+  font-size: 20px;
+}
+
+.saltie-mlarge {
+	font-size: 25px;
+}
+
+.saltie-mllarge {
+  font-size: 30px;
+}
+
+.saltie-large {
+	font-size: 35px;
+}
+
+.saltie-weight-100 {
+	font-weight: 100;
+}
+
+.saltie-weight-200 {
+  font-weight: 200;
+}
+
+.saltie-weight-300 {
+	font-weight: 300;
+}
+
+.saltie-weight-500 {
+	font-weight: 500;
+}
+
+.saltie-weight-700 {
+	font-weight: 700;
+}
+
+.saltie-weight-900 {
+	font-weight: 900;
+}
+
+/*@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-Blk.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-Hv.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-Bd.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-Md.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-Lt.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-Th.otf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'HelveticalNeue';
+  src: url('./fonts/HelveticaNeueLTPro-UltLt.otf');
+  font-weight: 100;
+}
+*/
+@font-face {
+    font-family: 'Glyphter';
+    src: url('./fonts/Glyphter.eot');
+    src: url('./fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Glyphter.woff') format('woff'),
+         url('./fonts/Glyphter.ttf') format('truetype'),
+         url('./fonts/Glyphter.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'Glyphter';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.icon-check:before{content:'\0046';}

@@ -1,0 +1,9 @@
+<div style="padding-bottom: 60px; overflow-y: auto;">
+	<div class="padding-top-40">
+		<saltie-list [invert]="false" [header]="header" [list]="list">
+		</saltie-list>
+	</div>
+	<div class="saltie-footer-button saltie-medium saltie-weight-100" (click)="regions()" [ngClass]="{'saltie-disable-btn': count < 1}">
+		Next >
+	</div>
+</div>

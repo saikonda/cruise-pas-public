@@ -1,0 +1,57 @@
+<div style="padding-bottom: 60px; overflow-y: auto; overflow-x: hidden; width: 100%;" class="blue-dark-bg">
+	<div *ngIf="question">
+		<div>
+			<div class="saltie-question-page-back" style="z-index:10">
+				<img class="saltie-question-page-back" src="../../../../theme/imgs/down-arrow.svg" (click)="back()">
+			</div>
+			<div class="saltie-question-page-next" style="z-index:10">
+				<img class="saltie-question-page-next" src="../../../../theme/imgs/down-arrow.svg" (click)="next()">
+			</div>
+			<img slide-animation [type]="'no-delay'" [direction]="transitionDirection" [trigger]="transitionOut.asObservable()" src="{{BASE_URL + (question ? question.image : '')}}" class="saltie-question-img">
+		</div>
+		<div class="saltie-question-survey">
+			<div class="saltie-question-answer-container" style="height: 160px;">
+				
+			</div>
+		</div>
+		<div style="color: white; position: absolute; bottom: 100px; padding: 0px 20px; width: 100%;">
+			<div class="saltie-question-bread-crumbs saltie-small" style="opacity: .4;">
+				Cruise Concierge / Categories / {{category ? category.title : ""}}
+			</div>
+			<div slide-animation [direction]="transitionDirection" [trigger]="transitionOut.asObservable()" style="height: 74px; margin-top: 10px;"class="saltie-mlarge saltie-weight-100">
+				{{question ? question.description : ""}}
+			</div>
+			<div style="width:253px;" class="saltie-answers">
+				<div class="saltie-answer" style="margin-right: 25px;"(click)="choose(0)" [ngClass]="{'saltie-answer-selected': answer === 0}">
+					NO
+				</div>
+				<div class="saltie-answer" style="margin-right: 25px" (click)="choose(1)" [ngClass]="{'saltie-answer-selected': answer === 1}">
+					MAYBE
+				</div>
+				<div class="saltie-answer" (click)="choose(2)" [ngClass]="{'saltie-answer-selected': answer === 2}">
+					YES
+				</div>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="!question" slide-animation [type]="'no-delay'" [direction]="'left'" [trigger]="transitionOut.asObservable()">
+		<div style="color: white" class="padding-top-40">
+			<div *ngIf="nextCategory" style="padding: 0px 30px; margin-top: 100px;" class="saltie-mllarge saltie-weight-100 saltie-white">
+				<div>The next category is:</div>
+				<div>"{{nextCategory.title}}"</div>
+				<button class="saltie-question-btn" (click)="goToNextCategory()">
+					See Next
+				</button>
+			</div>
+			<div *ngIf="!nextCategory" style="padding: 0px 30px; margin-top: 100px;" class="saltie-mllarge saltie-weight-100 saltie-white">
+				<div>No more categories.</div>
+			</div>
+			<button class="saltie-question-btn" (click)="goToAllCategories()">
+					See All Categories
+			</button>
+		</div>
+	</div>
+	<div class="saltie-footer-button saltie-medium saltie-weight-100" (click)="recommendations()">
+		Show Cruise Recommendations
+	</div>
+</div>

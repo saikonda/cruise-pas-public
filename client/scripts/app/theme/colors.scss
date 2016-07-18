@@ -1,0 +1,22 @@
+$color-primary-font: rgba(255,255,255,1);
+$color-blue-tint: rgba(56,152,159,.92);
+$color-blue-primary: rgba(56,152,159,1);
+$color-blue-dark: rgba(1,35,45,1);
+$color-blue-dark-tint: rgba(1,35,45,.95);
+$color-white: rgba(255,255,255,1);
+$color-gold: rgba(180,163,131,1);
+$color-disable-bg: rgba(191,199,202,1);
+$color-disable-fnt: rgba(120,128,131,1);
+$color-unselected: $color-gold;
+
+.color-gold {
+	color: $color-gold;
+}
+
+.color-disable-bg {
+	background: $color-disable-bg;
+}
+
+.color-disable-fnt {
+	color: $color-disable-fnt;
+}

@@ -1,0 +1,7 @@
+div.saltie-algorithms {
+	@extend div.saltie-header-container-invert;
+	position: absolute;
+	height: 100%;
+	padding-top: 60px;
+	background: $color-blue-primary;
+}

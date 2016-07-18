@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><%=htmlWebpackPlugin.options.title%></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%=htmlWebpackPlugin.options.title%>">
+	<script type="text/javascript">stLight.options({publisher: "0345df67-0ce3-40b7-a1e4-a5312d42a54f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+	 <!-- base url -->
+  	<!-- <base href="<%=htmlWebpackPlugin.options.baseUrl%>"> -->
+
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=801905623176143";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+
+<body>
+    <main></main>
+</body>
+
+</html>

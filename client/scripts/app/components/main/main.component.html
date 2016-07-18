@@ -1,0 +1,26 @@
+<div>
+	<div class="saltie-navbar saltie-smedium saltie-weight-100" *ngIf="!hideNavigation">
+		<img [ngClass]="{hidden: !showBack}" src="../../theme/imgs/menu-backarrow.svg" class="saltie-navbar-backarrow" (click)="back()">
+		<span class="saltie-navbar-title">Cruise Concierge</span>
+		<img src="../../theme/imgs/menu-hamburger.svg" class="saltie-navbar-hamburger" (click)="openMenu()">
+	</div>
+	<router-outlet>
+	</router-outlet>
+	<div class="saltie-menu">
+		<img src="../../theme/imgs/menu-close.svg" class="saltie-menu-close" (click)="closeMenu()">
+		<div class="saltie-menu-list-container saltie-medium saltie-weight-100">
+			<div class="saltie-menu-list" (click)="navigate('Algorithms')">
+				How the Algorithm Works
+			</div>
+			<div class="saltie-menu-list" (click)="navigate('WhosTraveling')">
+				Who's Traveling?
+			</div>
+			<div class="saltie-menu-list" (click)="navigate('Categories')">
+				Survey Categories
+			</div>
+			<div class="saltie-menu-list saltie-no-bottom-border" (click)="navigate('Recommendations')">
+				Saved Recommendations
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,159 @@
+.slide-left-out-delay-200ms {
+    -webkit-animation-name: slide-left-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-left-out;
+    animation-duration: .75s;
+    animation-delay: 200ms;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.slide-left-out {
+    -webkit-animation-name: slide-left-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-left-out;
+    animation-duration: .75s;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@-webkit-keyframes slide-left-out {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes slide-left-out {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+.slide-right-out-delay-200ms {
+    -webkit-animation-name: slide-right-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-right-out;
+    animation-duration: .75s;
+    animation-delay: 200ms;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.slide-right-out {
+    -webkit-animation-name: slide-right-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-right-out;
+    animation-duration: .75s;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@-webkit-keyframes slide-right-out {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+@keyframes slide-right-out {
+    from {
+        right: 0%;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+.slide-right-delay-200ms {
+    right: 100%;
+	-webkit-animation-name: slide-right; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-right;
+    animation-duration: .75s;
+    animation-delay: 200ms;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.slide-right {
+    right: 100%;
+	-webkit-animation-name: slide-right; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-right;
+    animation-duration: .75s;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@-webkit-keyframes slide-right {
+    from {
+    	right: 100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes slide-right {
+    from {
+    	right: 100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+.slide-left-delay-200ms {
+    left: 100%;
+	-webkit-animation-name: slide-left; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-left;
+    animation-duration: .75s;
+    animation-delay: 200ms;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.slide-left {
+    left: 100%;
+	-webkit-animation-name: slide-left; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: .75s; /* Chrome, Safari, Opera */
+    animation-name: slide-left;
+    animation-duration: .75s;
+    position: relative;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@-webkit-keyframes slide-left {
+    from {
+    	left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes slide-left {
+    from {
+    	left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}

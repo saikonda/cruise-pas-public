@@ -1,0 +1,32 @@
+div.saltie-navbar {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background: $color-blue-dark;
+	text-align: center;
+	color: $color-blue-primary;
+	padding: 10px;
+	z-index: 500;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+span.saltie-navbar-title {
+	position: relative;
+}
+
+img.saltie-navbar-hamburger {
+	height: 20px;
+	position: relative;
+	float: right;
+	cursor: pointer;
+}
+
+img.saltie-navbar-backarrow {
+    height: 18px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}

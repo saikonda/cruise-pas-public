@@ -1,0 +1,31 @@
+.background-landing-page {
+	position: absolute;
+	z-index: -1;
+	background: url('imgs/landingpage-background-nooverlay.jpg');
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	background-size: cover;
+}
+
+.blue-tint-bg {
+	background: $color-blue-tint;
+	position: absolute;
+	height: 100%;
+	overflow-y: auto;
+	width: 100%;
+}
+
+.blue-dark-bg {
+	background: $color-blue-dark;
+	position: absolute;
+	height: 100%;
+}
+
+.dark-blue-bg {
+	background: $color-blue-dark;
+}
+
+.blue-primary-bg {
+	background: $color-blue-primary;
+}

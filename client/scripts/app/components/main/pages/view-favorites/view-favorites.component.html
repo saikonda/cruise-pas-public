@@ -1,0 +1,51 @@
+<div style="overflow-y: auto; overflow-x: hidden; width: 100%; height: 100%; position: absolute; padding: 60px 30px;" class="blue-primary-bg saltie-white saltie-weight-200">
+	<div class="saltie-small saltie-weight-500" style="opacity: .4; margin-bottom: 20px;">Cruise Concierge / Saved Recommendations</div>
+	<div class="saltie-large">Saved Cruises ({{favorites.length}})</div>
+	<div style="clear:both; padding-top: 20px; position: relative; height: 300px;" *ngFor="#favorite of favorites">
+		<!--Left side-->
+		<div class="dark-blue-bg" style="display: inline-block; float: left; width: 48%; padding: 5px; overflow: hidden;">
+			<div style="text-align: center; margin-bottom: 5px;" class="saltie-weight-300">{{favorite.tripName}}</div>
+			<img src="{{baseUrl}}{{favorite.destinationImage}}" style="width: 100%; position: relative; z-index : 0; margin-top: 5px;"/>
+			
+			<div style="position: absolute; height: 0px; z-index: 1;">
+				<div class="saltie-rec-match" *ngIf="favorite.matchPercent" style="top: -44px; position: relative;">
+					<span class="saltie-weight-500">{{favorite.matchPercent}}%</span> match
+				</div>
+			</div>
+
+			<div class="saltie-small" style="margin-bottom: 10px; box-shadow: 0px -7px 17px 10px rgb(1, 35, 45); position: relative; z-index 1;">
+				<div>{{favorite.noNights}} Day Trip</div>
+				<div>{{favorite.tripName}}</div>
+				<div style="width: 100%; height: 1px; border-top: 1px solid white; margin-top: 8px; margin-bottom: 8px;"></div>
+				<div>{{favorite.cruiseLineName}}</div>
+				<div>{{favorite.shipName}}</div>
+				<div>from &#36;{{favorite.priceFrom}}</div>
+			</div>
+		</div>
+
+		<!--Right side-->
+		<div style="display: inline-block; float: right; width: 48%;">
+			<div class="saltie-smedium">Want more information on the cruise?</div>
+			<div>
+				<button style="padding: 10px; width: 100%; margin: 15px auto 5px;" class="saltie-button-o" (click)="emailScreen=true">
+					Email Summary
+				</button>
+			</div>
+			<div>
+				<button style="padding: 10px; width: 100%; margin: 5px auto;" class="saltie-button-o" (click)="download()">
+					Download Saltie
+				</button>
+			</div>
+			<div style="text-align: center; margin-top: 10px;">
+				<div style="font-size: 13px; font-weight: 300; margin-bottom: 5px;">Share this cruise:</div>
+				
+				<div id="fb-root"></div>
+				<div class="fb-share-button" data-href="https://www.facebook.com/SaltieCruises" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore st_facebook_custom fa fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FSaltieCruises&amp;src=sdkpreparse" onclick="javascript:window.open(this.href, '', 'menubar=no, toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a></div>
+
+				<a href="https://twitter.com/share?url=https://www.facebook.com/SaltieCruises&text=I answered a few questions and Saltie told me my ideal cruise. Find yours!&via=SaltieCruises" class="twitter-share-button st_twitter_custom fa fa-twitter" onclick="javascript:window.open(this.href, '', 'menubar=no, toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+				<a class="email-share-button st_email_custom fa fa-envelope-o" href="mailto:?subject=Saltie Cruises&amp;body=I answered a few questions and saltie told me my idea cruise. Find yours! https://www.facebook.com/SaltieCruises via @SaltieCruises"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<email-cruises (hide)="emailScreen=false" [show]="emailScreen" [tripLink]="shareTripLink" [tripDesc]="shareTripDesc"></email-cruises>

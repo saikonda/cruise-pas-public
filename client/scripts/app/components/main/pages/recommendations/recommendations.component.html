@@ -1,0 +1,12 @@
+<div style="overflow-y: auto; overflow-x: hidden; width: 100%;" [ngClass]="{'padding-bottom-60': rest.favorites.size > 0}">
+	<div class="padding-top-40">
+		<saltie-list [invert]="true" [header]="header" [list]="list">
+		</saltie-list>
+	</div>
+	<div *ngIf="rest.favorites.size > 0" class="saltie-footer-button saltie-medium saltie-weight-100" (click)="viewFavorites()">
+		View Favorites ({{rest.favorites.size}})
+	</div>
+</div>
+<div *ngIf="emailScreen">
+<email-cruises (hide)="emailScreen=false" [show]="emailScreen" [tripLink]="shareTripLink" [tripDesc]="shareTripDesc"></email-cruises>
+</div>
